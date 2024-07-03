@@ -7,7 +7,7 @@ import random
 st.header("タンパク質の目標量と目安を知ろう")
 #1．目標量を知ろう
 st.subheader("１．まずは目標摂取量を出してみよう！")
-st.text("←←身体活動レベルとは日常の活動を、強度に応じて3段階に区分したものです")
+st.text("←←身体活動レベルとは日常の活動を、強度に応じて3段階に区分したもの")
 st.text("←←[1 運動はしない(低い) 2 軽く運動(ふつう) 3 活発に活動(高い)]を選択して[実行]‼")
 
 # input
@@ -89,7 +89,7 @@ if st.sidebar.button('実行',type='primary'):
 #2.目安チェック
 st.text("")
 st.subheader("２．目標量がわかったら、次に今日の朝食チェック！")
-st.text("どのくらいタンパク質を摂っているか確認してみましょう")
+st.text("どのくらいタンパク質を摂っているか確認しましょう")
 
 #excel data　Pandasのread_excel関数、ファイルからデータを読み込みDataFrameオブジェクトとしてdfに格納
 excel_file = 'tanpaku.xlsx'
@@ -113,4 +113,4 @@ with st.expander("あなたの摂ったタンパク質量をクリックして�
 #選んでいない品名からひとつをランダムにおススメする
   remaining_keys = [value for value in values if value not in selected_keys]
   recommend_keys = random.choice(remaining_keys)
-  st.text(f"✨目標量めざして、まずは一品追加してみよう！　今日は{recommend_keys}がおススメ✨")
+  st.text(f"目標量めざして、まずは一品追加してみよう！今日は{recommend_keys}がおススメ✨")
